@@ -29,7 +29,7 @@ app.post("/checkout", async (req, res) => {
         };
       }),
       success_url: process.env.CLIENT_URL,
-      cancel_url: `${process.env.CLIENT_URL}`,
+      cancel_url: `${process.env.CLIENT_URL}/basket`,
     });
     return res.json({ url: session.url });
   } catch (e) {
